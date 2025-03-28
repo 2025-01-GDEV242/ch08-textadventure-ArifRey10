@@ -14,7 +14,7 @@ public class Player {
     public Player(String name, String startingRoom) {
         this.name = name;
         this.currentRoom = startingRoom;
-        this.carriedItem = null;
+        this.carriedItem = null; // No item at the beginning
     }
 
     public String getName() {
@@ -32,29 +32,29 @@ public class Player {
     public Item getCarriedItem() {
         return carriedItem;
     }
-    
-     public void setCarriedItem(Item item) {
-        this.carriedItem = item;
+
+    public void addItem(Item item) {
+        this.carriedItem = item;  // Add the item to the player's inventory
     }
-    
-     public void dropItem() {
-        carriedItem = null; // Drop the current item
+
+    public void removeItem() {
+        this.carriedItem = null;  // Remove the item from the player's inventory
     }
     
     @Override
     public String toString() {
-    // Start with the name and current room
-    String status = name + " is currently in: " + currentRoom;
-    
-    // Check if the player is carrying an item
-    if (carriedItem != null) {
-        status += " and carrying " + carriedItem.getName(); 
-        // If carrying an item, append its name
-    } else {
-        status += " and not carrying any items";
-        // Otherwise, state they're not carrying anything
-    }
-    
-    return status;
+        // Start with the name and current room
+        String status = name + " is currently in: " + currentRoom;
+        
+        // Check if the player is carrying an item
+        if (carriedItem != null) {
+            status += " and carrying " + carriedItem.getName(); 
+            // If carrying an item, append its name
+        } else {
+            status += " and not carrying any items";
+            // Otherwise, state they're not carrying anything
+        }
+        
+        return status;
     }
 }
