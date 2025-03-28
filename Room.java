@@ -20,7 +20,7 @@ public class Room
 {
     private String description;
     private HashMap<String, Room> exits;        // stores exits of this room.
-
+    private Item item;
     /**
      * Create a room described "description". Initially, it has
      * no exits. "description" is something like "a kitchen" or
@@ -42,7 +42,11 @@ public class Room
     {
         exits.put(direction, neighbor);
     }
-
+    
+     public void setItem(Item item) {
+        this.item = item;
+    }
+    
     /**
      * @return The short description of the room
      * (the one that was defined in the constructor).
