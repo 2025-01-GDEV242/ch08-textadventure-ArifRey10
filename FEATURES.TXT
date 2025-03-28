@@ -1,0 +1,12 @@
+
+A-Level Features:
+------------------
+1. Basic game structure with rooms and exits.
+2. Player can move between rooms using the "go" command.
+3. The game provides a "help" command that lists available commands.
+4. The game can quit with the "quit" command.
+5. The player can interact with rooms, including printing the long description of the current room.
+6. Item interaction in rooms (add, take, drop).
+7. The ability to carry one item at a time.
+
+
